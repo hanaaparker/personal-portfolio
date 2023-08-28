@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #0C356A;
+    color: black;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/image3.jpg);
+    background-size: cover;
+    background-position: right;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.navbar{
+    height: 90px;
+    width: 100vw;
+    background-color:#0C356A;
+}
+.logo{
+    width: 90px;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 5px ;
+    font-weight: bolder;
+}
+.hrcontainer{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+hr{
+    border-style: none;
+    border-top: dotted;
+    border-width: 10px;
+    border-color: #279EFF;
+    width: 60%;
+}
+
+#About{
+    padding: 80px 0;
+    color: #D5FFD0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #D5FFD0;
+}
+.about-col-2 p{
+    margin-top: 40px;
+    font-size: 24px;
+    color: #D5FFD0;
+}
+#projects{
+    padding: 30px 0;
+}
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projects-list div{
+    background: #D5FFD0;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+.projects-list p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.projects-list h1{
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/* Skills */
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #D5FFD0;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 14px;
+    background: #93B1A6;
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px;
+    background: #d13639;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding:4px 6px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after{
+    content:"";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1f1f1;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+.contact{
+    height: 100px;
+    width: 100vw;
+    background-color:#468B97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact img{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+}
